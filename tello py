@@ -20,8 +20,12 @@ while True:
 
     if startCounter == 0:
         me, takeoff()
-        me, move_left(20)
+        time, sleep(5)
         me, rotate_clockwise(90)
+        time, sleep(3)
+        me, move_left(35)
+        time, sleep(3)
+        me, land()
         startCounter = 1
 
         cv2.imshow("MyResult", ing)
