@@ -1,0 +1,19 @@
+import socket
+import time
+
+def main():
+    state_socket.socket(socket.AF_INET, socket.sock_DGRAM)
+
+    state_socket.bind('0.0.0.0', 8890)
+
+    while True:
+        time.sleep(0.01)
+        try:
+            data, server = state_socket.recvfrom(1024)
+            print(data.decode())
+            except:
+                print('error')
+                break
+
+
+main()
